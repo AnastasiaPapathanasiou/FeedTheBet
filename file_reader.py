@@ -3,13 +3,15 @@ import sys
 
 def read_txt(filepath):
     with open(filepath, 'r', encoding = "utf-8") as f:
-        content = f.read()
-    print(content)
+        for line in f:
+            print(line.strip())
+            input()
 
 def read_csv(filepath):
     with open(filepath, 'r', encoding = "utf-8") as f:
-        content = f.read()
-    print(content)
+        for line in f:
+            print(line.strip())
+            input()
 
 READERS = {".txt": read_txt, ".csv": read_csv}
 
